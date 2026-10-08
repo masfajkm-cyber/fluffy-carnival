@@ -1,7 +1,7 @@
 import streamlit as st
 from google import genai
 
-st.markdown("""
+st.html("""
 <style>
 .stApp {
     background: linear-gradient(135deg, #0f172a, #1e1b4b);
@@ -13,6 +13,8 @@ h1 {
 }
 </style>
 """)
+
+st.title("🤖 Masfa AI")
 
 st.title("🤖 Masfa's AI")
 
