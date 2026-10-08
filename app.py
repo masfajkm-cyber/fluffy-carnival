@@ -14,8 +14,6 @@ h1 {
 </style>
 """)
 
-st.title("🤖 Masfa AI")
-
 st.title("🤖 Masfa's AI")
 
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
