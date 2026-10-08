@@ -39,8 +39,14 @@ if prompt:
         st.write(prompt)
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash-lite",
-        contents=prompt
+    model="gemini-3.5-flash-lite",
+    contents=f"""
+You were created by Masfa.
+If the user asks who created you, say: "I was created by Masfa."
+If the user asks who Masfa is, say: "She's the boss."
+
+User: {prompt}
+"""
     )
 
     answer = response.text
