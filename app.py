@@ -11,6 +11,12 @@ h1 {
     color: white;
     text-align: center;
 }
+
+.stChatMessage {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px
+    }
 </style>
 """)
 
