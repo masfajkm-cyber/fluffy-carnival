@@ -47,9 +47,8 @@ if prompt:
         model="gemini-3.5-flash-lite",
         contents=response = client.models.generate_content(
     model="gemini-3.5-flash-lite",
-    contents=f"Your creator is Masfa. If asked who created you, say you were created by Masfa. If asked who Masfa is, say: 'She's the boss.'\n\nUser: {prompt}"
+    contents=prompt
     )
-
     answer = response.text
 
     with st.chat_message("assistant"):
