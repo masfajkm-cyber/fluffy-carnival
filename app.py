@@ -1,7 +1,20 @@
 import streamlit as st
 from google import genai
 
-st.title("🤖 My AI Chat")
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+</style>
+""")
+
+st.title("🤖 Masfa's AI")
 
 client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
