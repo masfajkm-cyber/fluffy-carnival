@@ -1,9 +1,9 @@
 import streamlit as st
-from openai import OpenAI
+from google import genai
 
 st.title("🤖 My AI Chat")
 
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -23,12 +23,12 @@ if prompt:
     with st.chat_message("user"):
         st.write(prompt)
 
-    response = client.responses.create(
-        model="gpt-5-mini",
-        input=prompt
+    response = client.models.generate_content(
+        model="gemini-3.8-flash",
+        contents=prompt
     )
 
-    answer = response.output_text
+    answer = response.text
 
     with st.chat_message("assistant"):
         st.write(answer)
